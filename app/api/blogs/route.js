@@ -1,9 +1,9 @@
-import connectDB from "@/lib/mongodb";
+// import connectDB from "@/lib/mongodb";
 import Blog from "@/models/Blog";
 
 export async function GET() {
   try {
-    await connectDB();
+    // await connectDB();
 
     const blogs = await Blog.find().sort({
       createdAt: -1,
@@ -21,7 +21,7 @@ export async function GET() {
 
 export async function POST(req) {
   try {
-    await connectDB();
+    // await connectDB();
 
     const body = await req.json();
 
